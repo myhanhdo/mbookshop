@@ -44,80 +44,80 @@ export const GridContainer = styled(Grid)`
         };
     };
     & .thriller{
-        background-color: #8C3AC7;
+        background-color: #44010a;
         &:hover{
             & h3{
-                color: #8C3AC7;
+                color: #44010a;
                 transform: scale(1.3);
             };
             background-color: inherit;
         };
     };
     & .romance{
-        background-color: #E95C70;
+        background-color: #D8412F;
         &:hover{
             & h3{
-                color: #E95C70;
+                color: #D8412F;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .young-adult{
-        background-color: #EF6A3A;
+        background-color: #F9A603;
         &:hover{
             & h3{
-                color: #EF6A3A;
+                color: #F9A603;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .science-fiction{
-        background-color: #EFD140;
+        background-color: #EA6500;
         &:hover{
             & h3{
-                color: #EFD140;
+                color: #EA6500;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .fantasy{
-        background-color: #2BA3BC;
+        background-color: #316d11;
         &:hover{
             & h3{
-                color: #2BA3BC;
+                color: #316d11;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .poetry{
-        background-color: #93C548;
+        background-color: #324851;
         &:hover{
             & h3{
-                color: #93C548;
+                color: #324851;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .biography{
-        background-color: #7F8B93;
+        background-color: #573c27;
         &:hover{
             & h3{
-                color: #7F8B93;
+                color: #573c27;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
         };
     };
     & .self-help{
-        background-color: #517DDF;
+        background-color: #626D71;
         &:hover{
             & h3{
-                color: #517DDF;
+                color: #626D71;
                 transform: scale(1.3);
             };
             background-color: #ffffff;
@@ -125,4 +125,4 @@ export const GridContainer = styled(Grid)`
     };
 `
 
-    
+

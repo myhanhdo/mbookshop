@@ -10,7 +10,7 @@ import Meta from '../../components/Meta';
 const ShippingPage = ({ history }) => {
 
     const cart = useSelector(state => state.cart);
-    const {shippingAddress} = cart
+    const { shippingAddress } = cart
 
     const [address, setAddress] = useState(shippingAddress.address);
     const [city, setCity] = useState(shippingAddress.city);
@@ -26,46 +26,46 @@ const ShippingPage = ({ history }) => {
     }
     return (
         <div className='shipping-page'>
-            <Meta title="Shipping | Book Attic" />
+            <Meta title="Shipping | M-Book Shop" />
             <Container maxWidth={'lg'}>
-                <StepperNav stepNumber={1}/>
+                <StepperNav stepNumber={1} />
                 <FormContainer component={Paper} justify='left' maxWidth='xs'>
                     <h2>SHIPPING</h2>
                     <form onSubmit={submitHandler}>
-                    <TextField
-                    required
-                    variant='outlined'
-                    margin='dense'
-                    fullWidth 
-                    label="Address"
-                    value={address}
-                    onChange={(e)=>setAddress(e.target.value)}/>
-                    <TextField 
-                    required
-                    margin='dense'
-                    variant='outlined'
-                    fullWidth
-                    label="City"
-                    value={city}
-                    onChange={(e)=>setCity(e.target.value)}/>
-                    <TextField 
-                    required
-                    margin='dense'
-                    variant='outlined'
-                    fullWidth
-                    label="Postal Code"
-                    value={postalCode}
-                    onChange={(e)=>setPostalCode(e.target.value)}/>
-                    <TextField 
-                    required
-                    margin='dense'
-                    style={{marginBottom: '15px'}}
-                    variant='outlined'
-                    fullWidth
-                    label="Country"
-                    value={country}
-                    onChange={(e)=>setCountry(e.target.value)}/>
-                    <Button variant='contained' color='primary' type='submit'>Continue</Button>
+                        <TextField
+                            required
+                            variant='outlined'
+                            margin='dense'
+                            fullWidth
+                            label="Address"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)} />
+                        <TextField
+                            required
+                            margin='dense'
+                            variant='outlined'
+                            fullWidth
+                            label="City"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)} />
+                        <TextField
+                            required
+                            margin='dense'
+                            variant='outlined'
+                            fullWidth
+                            label="Postal Code"
+                            value={postalCode}
+                            onChange={(e) => setPostalCode(e.target.value)} />
+                        <TextField
+                            required
+                            margin='dense'
+                            style={{ marginBottom: '15px' }}
+                            variant='outlined'
+                            fullWidth
+                            label="Country"
+                            value={country}
+                            onChange={(e) => setCountry(e.target.value)} />
+                        <Button variant='contained' color='primary' type='submit'>Continue</Button>
                     </form>
                 </FormContainer>
             </Container>

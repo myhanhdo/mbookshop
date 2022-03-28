@@ -27,7 +27,7 @@ const CartPage = ({ match, location, history }) => {
 
   return (
     <div className="cart-page">
-      <Meta title="My Cart | Book Attic" />
+      <Meta title="My Cart | M-Book Shop" />
       <Container maxWidth={"lg"}>
         <h2 style={{ marginTop: "35px" }}>SHOPPING CART</h2>
         <Grid container spacing={3} justify="center">

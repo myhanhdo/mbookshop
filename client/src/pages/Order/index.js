@@ -91,7 +91,7 @@ const Order = ({ match, history }) => {
 
   return (
     <div className="order-page">
-      <Meta title="Your Order | Book Attic" />
+      <Meta title="Your Order | M-Book Shop" />
       <Container maxWidth={"lg"}>
         {loading ? (
           <Loader />
@@ -153,9 +153,8 @@ const Order = ({ match, history }) => {
                           alt={item.name}
                         />
                         <p>{item.name}</p>
-                        <p>{`${item.qty} x ${item.price} = ${
-                          item.qty * item.price
-                        }`}</p>
+                        <p>{`${item.qty} x ${item.price} = ${item.qty * item.price
+                          }`}</p>
                       </OrderItem>
                       <Divider />
                     </div>

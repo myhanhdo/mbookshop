@@ -18,96 +18,66 @@ import { getOrders } from "../../actions/orderActions";
 import Meta from "../../components/Meta";
 
 const OrderList = ({ history }) => {
-  const currentUser = useSelector((state) => state.currentUser);
+
+  const currentUser = useSelector(state => state.currentUser);
   const { userInfo } = currentUser;
 
-  const orderList = useSelector((state) => state.orderList);
+  const orderList = useSelector(state => state.orderList);
   const { orders, loading, error } = orderList;
+
 
   const dispatch = useDispatch();
 
-  //id
-  let previousId = 1;
-
   useEffect(() => {
+
     if (!userInfo || !userInfo.isAdmin) {
-      history.push("/login");
+      history.push('/login')
     }
 
-    dispatch(getOrders());
-  }, [dispatch, history, userInfo]);
+    dispatch(getOrders())
+  }, [dispatch, history, userInfo])
 
   return (
-    <div className="orderlist_page">
-      <Meta title="Orders List | Book Attic" />
-      <Container maxWidth={"lg"}>
-        {loading ? (
-          <Loader />
-        ) : error ? (
-          <Alert severity="error">{error}</Alert>
-        ) : (
-          <>
-            <h1>Orders</h1>
-            <TableContainer component={Paper}>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell component="th" scope="row">
-                      <strong>ID</strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>USER</strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>DATE</strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>TOTAL</strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>PAID</strong>
-                    </TableCell>
-                    <TableCell align="right">
-                      <strong>DELIVERED</strong>
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {orders.map((order) => (
-                    <StyledTableRow
-                      key={order._id}
-                      onClick={() => {
-                        history.push(`/order/${order._id}`);
-                      }}
-                    >
-                      <TableCell>{previousId++}</TableCell>
-                      {/* <TableCell>{order._id}</TableCell> */}
-                      <TableCell align="right">{order.user.name}</TableCell>
-                      <TableCell align="right">
-                        {order.createdAt.slice(0, 10)}
-                      </TableCell>
-                      <TableCell align="right">${order.totalPrice}</TableCell>
-                      <TableCell align="right">
-                        {order.isPaid ? (
-                          order.paidAt.slice(0, 10)
-                        ) : (
-                          <ClearIcon style={{ color: "red" }} />
-                        )}
-                      </TableCell>
-                      <TableCell align="right">
-                        {order.isDelivered ? (
-                          order.deliveredAt.slice(0, 10)
-                        ) : (
-                          <ClearIcon style={{ color: "red" }} />
-                        )}
-                      </TableCell>
-                    </StyledTableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </>
-        )}
+    <div className='orderlist_page'>
+      <Meta title="Orders List | M-Book Shop" />
+      <Container maxWidth={'lg'}>
+        {
+          loading ? <Loader /> : error ? <Alert severity='error'>{error}</Alert> : (
+            <>
+              <h1>Orders</h1>
+              <TableContainer component={Paper}>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell component="th" scope="row"><strong>ID</strong></TableCell>
+                      <TableCell align='right'><strong>USER</strong></TableCell>
+                      <TableCell align='right'><strong>DATE</strong></TableCell>
+                      <TableCell align='right'><strong>TOTAL</strong></TableCell>
+                      <TableCell align='right'><strong>PAID</strong></TableCell>
+                      <TableCell align='right'><strong>DELIVERED</strong></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {orders.map(order => (
+                      <StyledTableRow
+                        key={order._id}
+                        onClick={() => { history.push(`/order/${order._id}`) }}
+                      >
+                        <TableCell>{order._id}</TableCell>
+                        {/* <TableCell align='right'>{order.user.name}</TableCell> */}
+                        {/* <TableCell align='right'>{order.user.name}</TableCell> */}
+                        <TableCell align='right'>user</TableCell>
+                        <TableCell align='right'>{order.createdAt.slice(0, 10)}</TableCell>
+                        <TableCell align='right'>${order.totalPrice}</TableCell>
+                        <TableCell align='right'>{order.isPaid ? order.paidAt.slice(0, 10) : <ClearIcon style={{ color: 'red' }} />}</TableCell>
+                        <TableCell align='right'>{order.isDelivered ? order.deliveredAt.slice(0, 10) : <ClearIcon style={{ color: 'red' }} />}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </>
+          )}
       </Container>
     </div>
   );

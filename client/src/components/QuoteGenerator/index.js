@@ -1,48 +1,48 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 import React, { useEffect, useRef, useState } from 'react'
 
-const QuoteGenerator = ({genre}) => {
-    
+const QuoteGenerator = ({ genre }) => {
+
     const quotes = {
         thriller: [
-            {quote: '“Someone doesn’t always need a gun to kill you. Sometimes, their actions are enough. You don’t need an assassin to kill you. Sometimes, a lover is enough.”' , by: '― Namrata Gupta, Together We Were (W)hole'},
-            {quote: '“The sweetest smiles hold the darkest secrets...”' , by: '― Sara Shepard, Flawless'},
-            {quote: '“Nobody’s ever been arrested for a murder; they have only ever been arrested for not planning it properly.”' , by: '― Terry Hayes, I Am Pilgrim'}
+            { quote: '“I do not love men: I love what devours them.”', by: '― André Gide, Prometheus Illbound' },
+            { quote: '“Blood is really warm, it’s like drinking hot chocolate but with more screaming.”', by: '―  Ryan Mecum, Zombie Haiku: Good Poetry for Your...Brains' },
+            { quote: '“Demons are like obedient dogs; they come when they are called.”', by: '― Remy de Gourmont' }
         ],
         romance: [
-            {quote: '“You should be kissed and often, and by someone who knows how.”' , by: '― Margaret Mitchell, Gone With The Wind'},
-            {quote: '“In vain I have struggled. It will not do. My feelings will not be repressed. You must allow me to tell you how ardently I admire and love you.”' , by: '― Jane Austen, Pride And Prejudice'},
-            {quote: '“I cannot let you burn me up, nor can I resist you. No mere human can stand in a fire and not be consumed.”' , by: '― A.S. Byatt, Possession'}
+            { quote: '“I’ve never had a moment’s doubt. I love you. I believe in you completely. You are my dearest one. My reason for life.”', by: '― Atonement by Ian McEwan' },
+            { quote: '“Her love was entire as a child’s, and though warm as summer it was fresh as spring.”', by: '― Far From The Madding Crowd by Thomas Hardy' },
+            { quote: '“Love seeketh not itself to please, Nor for itself hath any care; But for another gives its ease, And builds a Heaven in Hell’s despair.”', by: '― The Clod And The Pebble by William Blake' }
         ],
         youngadult: [
-            {quote: "“I like the night. Without the dark, we'd never see the stars.”" , by: '― Stephen Meyer, Twilight'},
-            {quote: "“You don't get to choose if you get hurt in this world...but you do have some say in who hurts you. I like my choices.”" , by: '― John Green, The Fault in Our Stars'},
-            {quote: "“There's nothing like deep breaths after laughing that hard. Nothing in the world like a sore stomach for the right reasons.”" , by: '― Stephen Chbosky, The Perks if Being a Wallflower'}
+            { quote: "“If you have two friends in your lifetime, you’re lucky. If you have one good friend, you’re more than lucky.”", by: '― That Was Then, This Is Now by S.E. Hinton' },
+            { quote: "“I think that maybe forgiveness is like change—it comes in small steps.”", by: '― The Adoration of Jenna Fox by Mary E. Pearson' },
+            { quote: "“We who have means and a voice must use them to help those who have neither.”", by: '― These Shallow Graves by Jennifer Donnelly' }
         ],
         sciencefiction: [
-            {quote: "“That makes me a pirate! A space pirate!”" , by: '― Andy Weir, The Martian'},
-            {quote: "“Who controls the past controls the future. Who controls the present controls the past.”" , by: '― George Orwell, 1984'},
-            {quote: "“Time is an illusion. Lunchtime doubly so.”" , by: "― Douglas Adams, Hitchhiker's Guide to the Galaxy"}
+            { quote: "“Each day means a new twenty-four hours. Each day means everything's possible again. You live in the moment, you die in the moment, you take it all one day at a time.”", by: '― Legend by Marie Lu' },
+            { quote: "“It is good to have an end to journey toward; but it is the journey that matters, in the end.”", by: '― The Left Hand of Darkness by Ursula K. Le Guin' },
+            { quote: "“Isn't it enough to see that a garden is beautiful without having to believe that there are fairies at the bottom of it, too?”", by: "― The Hitchhiker's Guide to the Galaxy by Douglas Adams" }
         ],
-        fantasy : [
-            {quote: "“It is our choices, Harry, that show what we truly are, far more than our abilities.”" , by: '― J.K. Rowling, Harry Potter and the Chamber of Secrets'},
-            {quote: "“Not all those who wander are lost.”" , by: '― J.R.R. Tolkien, The Lord of the Rings'},
-            {quote: "“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.”" , by: '― George R.R. Martin, A Game of Thrones'}
+        fantasy: [
+            { quote: "“One day, you will be old enough to start reading fairytales again.”", by: '― The Chronicles of Narnia by C.S. Lewis' },
+            { quote: "“Every time you take one path, you must live with the memory of the other: of a life left unchosen.”", by: '― The Girl in the Tower by Katherine Arden' },
+            { quote: "“Does it make you brave to stick your hand in a bear's mouth? Would you do it again just because you didn't die?”", by: '― The Dragon Reborn by Robert Jordan' }
         ],
         poetry: [
-            {quote: "“Do I dare Disturb the universe?" , by: '― T.S. Eliot, The Wasteland and Other Poems'},
-            {quote: "“Love comforteth like sunshine after rain”" , by: "― William Shakespeare, Shakespeare's Sonnets"},
-            {quote: "“Hope is the thing with feathers. That perches in the soul. And sings the tune without the words. And never stops at all.”" , by: '― Emily Dickinson, The Complete Poems of Emily Dickinson'},
+            { quote: "“In the end, the poem is not a thing we see; it is, rather, a light by which we may see—and what we see is life.”", by: ' — Robert Penn Warren' },
+            { quote: "“Poets are soldiers that liberate words from the steadfast possession of definition.”", by: "— Eli Khamarov" },
+            { quote: "“The courage of the poet is to keep ajar the door that leads into madness.”", by: '— Christopher Morley' },
         ],
         biography: [
-            {quote: "“Everything can be taken from a man but one thing: the last of the human freedoms—to choose one’s attitude in any given set of circumstances, to choose one’s own way.”" , by: "―  Viktor E. Frankl, Man's Search for Meaning"},
-            {quote: "“Because the people who are crazy enough to think they can change the world, are the ones who do.”" , by: "― Steve Jobs, Steve Jobs"},
-            {quote: "“An eye for an eye will only make the whole world blind.”" , by: "― Mahatama Gandhi, Gandhi: An Autobiography"}
+            { quote: "“Whether I shall turn out to be the hero of my own life, or whether that station will be held by anybody else, these pages must show.”", by: "― David Copperfield by Charles Dickens" },
+            { quote: "“Always live your life with your biography in mind.”", by: "― Special Topics in Calamity Physics by Marisha Pessl" },
+            { quote: "“So long as governments set the example of killing their enemies, private individuals will occasionally kill theirs.”", by: "― Elbert Hubbard's Scrap Book by Elbert Hubbard" }
         ],
         selfhelp: [
-            {quote: "“Who you are is defined by what you’re willing to struggle for.”" , by: "― Mark Manson, The Subtle Art of Not Giving a F*ck"},
-            {quote: "“Winners are not afraid of losing. But losers are. Failure is part of the process of success. People who avoid failure also avoid success.”" , by: "― Robert T. Kiyosaki, Rich Dad, Poor Dad"},
-            {quote: "“The starting point of all achievement is DESIRE. Keep this constantly in mind. Weak desire brings weak results, just as a small fire makes a small amount of heat.”" , by: "―  Napoleon Hill, Think and Grow Rich"}
+            { quote: "“Stop caring about what other people think of you, how they perceive you, or if they approve of you. Start to focus on your inner peace.”", by: "― Live Self-Sufficiently: The 12 Step Living Guide by Tisha Marie Payton" },
+            { quote: "“Just because someone doesn't like what you do doesn't mean no one else will. A person's opinion is not The Truth, it's their truth.”", by: "― Everything is Figureoutable by Marie Forleo" },
+            { quote: "“I don,t just want success for my self ,I want my success to benefit others.”", by: "― How to start your first business by Osman Gulum" }
         ]
     }
 
@@ -51,35 +51,35 @@ const QuoteGenerator = ({genre}) => {
     const [currentQuote, setCurrentQuote] = useState(quotes[genre][0]);
 
     useEffect(() => {
-            let isMounted = true;
-            let count = 0;
-            const interval = setInterval(() => {
-                if(count < 2){
-                    QuoteRef.current.style.opacity = '0'
-                    count++;
-                    setTimeout(() => {
+        let isMounted = true;
+        let count = 0;
+        const interval = setInterval(() => {
+            if (count < 2) {
+                QuoteRef.current.style.opacity = '0'
+                count++;
+                setTimeout(() => {
                     setCurrentQuote(quotes[genre][count]);
-                    if(isMounted){
+                    if (isMounted) {
                         QuoteRef.current.style.opacity = '1'
-                    }    
+                    }
                 }, 1000);
-                }else{
-                    QuoteRef.current.style.opacity = '0'
-                    count = 0;
-                    setTimeout(() => {
-                        setCurrentQuote(quotes[genre][count]);
-                        if(isMounted){
-                            QuoteRef.current.style.opacity = '1'
-                        }  
-                    }, 1000);
-                }
+            } else {
+                QuoteRef.current.style.opacity = '0'
+                count = 0;
+                setTimeout(() => {
+                    setCurrentQuote(quotes[genre][count]);
+                    if (isMounted) {
+                        QuoteRef.current.style.opacity = '1'
+                    }
+                }, 1000);
+            }
 
-                return(() => { 
-                    isMounted = false;
-                    clearInterval(interval);
-                })
-            }, 7000);
-            return () => clearInterval(interval);
+            return (() => {
+                isMounted = false;
+                clearInterval(interval);
+            })
+        }, 7000);
+        return () => clearInterval(interval);
         // eslint-disable-next-line
     }, [genre])
     return (

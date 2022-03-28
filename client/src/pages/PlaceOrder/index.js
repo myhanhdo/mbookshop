@@ -52,7 +52,7 @@ const PlaceOrder = ({ history }) => {
 
   return (
     <div className="placerorder-page">
-      <Meta title="Your Order | Book Attic" />
+      <Meta title="Your Order | M-Book Shop" />
       <Container maxWidth={"lg"}>
         <StepperNav stepNumber={3} />
         <Grid container spacing={4}>
@@ -82,9 +82,8 @@ const PlaceOrder = ({ history }) => {
                       alt={item.name}
                     />
                     <p>{item.name}</p>
-                    <p>{`${item.qty} x ${item.price} = ${
-                      item.qty * item.price
-                    }`}</p>
+                    <p>{`${item.qty} x ${item.price} = ${item.qty * item.price
+                      }`}</p>
                   </OrderItem>
                   <Divider />
                 </div>

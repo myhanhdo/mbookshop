@@ -46,7 +46,7 @@ const UserList = ({ history }) => {
 
   return (
     <div className="userlist_page">
-      <Meta title="Users List | Book Attic" />
+      <Meta title="Users List | M-Book Shop" />
       <Container maxWidth={"lg"}>
         {loading ? (
           <Loader />

@@ -182,8 +182,8 @@ function Product({ match, history }) {
       <Meta
         title={
           product.name
-            ? `${product.name} | Book Attic`
-            : "Book Details | Book Attic"
+            ? `${product.name} | M-Book Shop`
+            : "Book Details | M-Book Shop"
         }
       />
       {loading ? (
@@ -218,7 +218,7 @@ function Product({ match, history }) {
                   <strong>
                     {product.category &&
                       product.category.charAt(0).toUpperCase() +
-                        product.category.slice(1)}
+                      product.category.slice(1)}
                   </strong>
                 </p>
                 <Divider ref={(el) => (divBRef = el)} />
@@ -242,9 +242,8 @@ function Product({ match, history }) {
             <AddToCartContainer ref={(el) => (priceRef = el)} component={Paper}>
               <h3>{`Price: $${product.price && product.price.toFixed(2)}`}</h3>
               <Divider />
-              <h3>{`Status: ${
-                product.countInStock ? "In Stock" : "Out of stock"
-              }`}</h3>
+              <h3>{`Status: ${product.countInStock ? "In Stock" : "Out of stock"
+                }`}</h3>
               <Divider />
               {product.countInStock > 0 && (
                 <FormControl>

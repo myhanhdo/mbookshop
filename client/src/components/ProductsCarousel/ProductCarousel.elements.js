@@ -23,7 +23,7 @@ export const LoaderContainer = styled.div`
 `
 
 export const CarouselItem = styled(Paper)`
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(255,255,255,0.5);
     display: flex;
     height: 15rem;
     color: white;

@@ -34,7 +34,7 @@ const PaymentPage = ({ history }) => {
 
   return (
     <div className="shipping-page">
-      <Meta title="Payment | Book Attic" />
+      <Meta title="Payment | M-Book Shop" />
       <Container maxWidth={"lg"}>
         <StepperNav stepNumber={2} />
         <FormContainer component={Paper} justify="left" maxWidth="xs">

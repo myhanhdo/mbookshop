@@ -3,9 +3,9 @@ import types from './types';
 
 export const createOrder = (order) => async (dispatch, getState) => {
     try {
-        dispatch({type: types.ORDER_CREATE_REQUEST});
+        dispatch({ type: types.ORDER_CREATE_REQUEST });
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
         const config = {
             headers: {
@@ -13,7 +13,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
-        
+
         const { data } = await axios.post('/api/orders', order, config)
 
         dispatch({
@@ -29,11 +29,11 @@ export const createOrder = (order) => async (dispatch, getState) => {
     }
 };
 
-export const getOrderDetails = (id) => async(dispatch, getState) => {
+export const getOrderDetails = (id) => async (dispatch, getState) => {
     try {
         dispatch({ type: types.ORDER_DETAILS_REQUEST })
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
         const config = {
             headers: {
@@ -57,11 +57,11 @@ export const getOrderDetails = (id) => async(dispatch, getState) => {
     }
 };
 
-export const payOrder = (id, paymentResult) => async(dispatch, getState) => {
+export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
     try {
         dispatch({ type: types.ORDER_PAY_REQUEST })
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
         const config = {
             headers: {
@@ -85,13 +85,13 @@ export const payOrder = (id, paymentResult) => async(dispatch, getState) => {
     }
 }
 
-export const getMyOrders = () => async(dispatch, getState) => {
+export const getMyOrders = () => async (dispatch, getState) => {
     try {
         dispatch({ type: types.ORDER_LIST_REQUEST })
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
-        const config = {  
+        const config = {
             headers: {
                 Authorization: `Bearer ${userInfo.token}`
             }
@@ -112,13 +112,13 @@ export const getMyOrders = () => async(dispatch, getState) => {
     }
 };
 
-export const getOrders = () => async(dispatch, getState) => {
+export const getOrders = () => async (dispatch, getState) => {
     try {
         dispatch({ type: types.ORDERS_LIST_ADMIN_REQUEST })
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
-        const config = {  
+        const config = {
             headers: {
                 Authorization: `Bearer ${userInfo.token}`
             }
@@ -139,19 +139,19 @@ export const getOrders = () => async(dispatch, getState) => {
     }
 };
 
-export const deliverOrder = (id) => async(dispatch, getState) => {
+export const deliverOrder = (id) => async (dispatch, getState) => {
     try {
         dispatch({ type: types.ORDER_DELIVER_REQUEST })
 
-        const { currentUser: { userInfo }} = getState();
+        const { currentUser: { userInfo } } = getState();
 
         const config = {
             headers: {
                 Authorization: `Bearer ${userInfo.token}`
             }
-        }  
+        }
 
-        const { data } = await axios.put(`/api/orders/${id}/deliver`,{},  config)
+        const { data } = await axios.put(`/api/orders/${id}/deliver`, {}, config)
 
         dispatch({
             type: types.ORDER_DELIVER_SUCCESS,

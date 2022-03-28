@@ -23,7 +23,7 @@ app.use("/api/upload", uploadRoutes);
 
 app.get("/api/config/paypal", (req, res) => {
   res.send(
-    "AUulzSHJuC6xcn6DheIEqmOMAaXdcpjZCG7TM2QAU7-eo0jZZ-SxKgCU3O4UCbV4OTQRCM-5trNTEyGE"
+    "AbPJVgBhujzWh7p8DL6ivM8kw3GFTpwm2ks2wnwPRyahspPdsB4qAKzbR_DGWDNueQBbO_1I23lUIzxV"
   );
 });
 

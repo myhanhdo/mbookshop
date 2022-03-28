@@ -1,9 +1,9 @@
 {
-  "short_name": "Book Attic",
-  "name": "Book Attic | Buy Books Online",
+  "short_name": "Book Shop",
+  "name": "M-Book Shop",
   "icons": [
     {
-      "src": "/icons/open-book.png",
+      "src": "./icons/open-book.png",
       "type": "image/png",
       "sizes": "512x512"
     }

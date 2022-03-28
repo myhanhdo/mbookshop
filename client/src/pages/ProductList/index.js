@@ -97,7 +97,7 @@ const ProductList = ({ history, match }) => {
 
   return (
     <div className="productlist_page">
-      <Meta title="Products List | Book Attic" />
+      <Meta title="Products List | M-Book Shop" />
       <Container maxWidth={"lg"}>
         {loading ? (
           <Loader />

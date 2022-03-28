@@ -108,7 +108,7 @@ const ProductCreate = ({ match, history }) => {
 
   return (
     <div className="productedit-page">
-      <Meta title="Product Create | Book Attic" />
+      <Meta title="Product Create | M-Book Shop" />
       <Container maxWidth={"lg"}>
         <StyledLink to="/admin/productlist">Go Back</StyledLink>
         {updateError && <Alert severity="error">{updateError}</Alert>}

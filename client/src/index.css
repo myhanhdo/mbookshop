@@ -43,7 +43,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background: linear-gradient(155deg, #2200FF, #8472FF, #FFFFFF);
+    /* background: #f6feff;
     background-size: 600% 600%;
     animation: GradientBackground 8s ease infinite; */
 
@@ -51,12 +51,16 @@ main {
 
 
 .home-main{
-    background: linear-gradient( 114deg, #bdb4fa, #7965fd,#3113f8 );
-    background-size: 600% 600%;
-    animation: GradientBackground 10s ease infinite;
+    /* background: linear-gradient( 114deg,#4DB4C3, #4DB4C3,#87D1B4 ,#AAD176, #D67ACC); */
+    background-image: url("https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?cs=srgb&dl=pexels-nitin-arya-1029141.jpg&fm=jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y:-80px;
+    /* background-size: 600% 600%;
+    animation: GradientBackground 10s ease infinite; */
     margin: -70px auto 0 auto;
-    padding: 145px 0 0 0;
-    height: 400px;
+    padding: 205px 0 0 0;
+    height: 570px;
 }
 
 .back-blur{
@@ -67,12 +71,12 @@ main {
   left: 0;
   width: 100%;
   height: 100.2%;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%,rgba(255, 255, 255, 0) 25%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.377) 0%,rgba(255, 255, 255, 0) 25%);
 }
 
 .genre-page{
-  /* background: linear-gradient( 114deg, #bdb4fa, #7965fd,#3113f8 ); */
-  /* background-size: 600% 600%;
+  /* background: linear-gradient( 114deg, #bdb4fa, #7965fd,#3113f8 );
+  background-size: 600% 600%;
   animation: GradientBackground 12s ease infinite; */
   margin: -70px auto 0 auto;
   padding: 125px 0 0 0;
@@ -80,49 +84,49 @@ main {
 }
 
 .romance-page{
-  background: linear-gradient(114deg, #e4a7af, #E95C70, #E71D3A);
+  background: linear-gradient(114deg, #D8412F, #FE7A47, #F5CA99);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
 
 .thriller-page{
-  background: linear-gradient(114deg, #b899ce, #8F3FC8, #7E13CA);
+  background: linear-gradient(114deg, #000000,#44010a,  #44010a,#000000);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
 
 .young-adult-page{
-  background: linear-gradient(93deg, #e9bcac, #EA7C54, #E8521B);
+  background: linear-gradient(93deg, #F9A603, #facd2c, #fce640);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
 
 .science-fiction-page{
-  background: linear-gradient(80deg, #dfcf84, #EAD25D, #E8C51B);
+  background: linear-gradient(80deg, #EA6500, #ff8839, #FDD475);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
 
 .fantasy-page{
-  background: linear-gradient(80deg, #9fc0c7, #45ACC1, #0FA7C6);
+  background: linear-gradient(80deg, #316d11, #57881f, #7cad43);
   background-size: 600% 600%;
-  animation: GradientBackground 10s ease infinite;
+  animation: GradientBackground 7s ease infinite;
 }
 
 .poetry-page{
-  background: linear-gradient(80deg, #b6c0a7, #95C153, #7EC514);
+  background: linear-gradient(80deg, #223036, #324851, #6a92a1);
   background-size: 600% 600%;
-  animation: GradientBackground 10s ease infinite;
+  animation: GradientBackground 7s ease infinite;
 }
 
 .biography-page{
-  background: linear-gradient(80deg, #B6B6B6, #7F8B93, #576670);
+  background: linear-gradient(80deg, #573c27, #6e4e33,  #946845);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
 
 .self-help-page{
-  background: linear-gradient(80deg, #a4b7e0, #5780DC, #1B54D3);
+  background: linear-gradient(80deg, #2f3536, #485153, #626D71);
   background-size: 600% 600%;
   animation: GradientBackground 10s ease infinite;
 }
@@ -150,17 +154,19 @@ main {
   100% {
     background-position: 0% 50%;
   }
+
 }
 
+
 footer{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0;
-    left:0;
-    height: 100px;
-    width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left:0;
+  height: 100px;
+  width: 100%;
 }
 
 @media (max-width: 500px){
@@ -168,12 +174,17 @@ footer{
     margin-top: -65px;
     padding: 100px 0 0 0;
     height: 55vh;
+    background-size: 100% 100%;
 }
+
+
 }
 
 @media (max-height: 800px) and (orientation: portrait){
 
   .home-main{
     height: 450px;
+    background-size: 100% 100%;
 }
+
 }
